@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ComparisonActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

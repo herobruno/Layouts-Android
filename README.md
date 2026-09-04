@@ -1,30 +1,37 @@
-# Layouts-Android 📱
+# Layouts-Android & Login Flow 📱
 
-Aplicativo Android desenvolvido em Kotlin para demonstrar e comparar os principais sistemas de gerenciamento de layout em Android (XML Views).
+Aplicativo Android desenvolvido em Kotlin para demonstrar e comparar os principais sistemas de gerenciamento de layout em Android (XML Views), integrado com um fluxo de Autenticação/Login.
 
 ---
 
 ## 🚀 Sobre o Projeto
 
-Este projeto tem como objetivo servir de guia e referência prática para o uso de diferentes layouts no desenvolvimento Android nativo. Ele apresenta exemplos funcionais e estruturados para cada um dos principais grupos de layout disponíveis no SDK do Android.
+Este projeto tem como objetivo servir de guia e referência prática para o uso de diferentes layouts no desenvolvimento Android nativo. Além disso, ele implementa um fluxo inicial de **Login** (E-mail e Senha) que valida os dados inseridos pelo usuário antes de redirecionar para a tela de comparativo de layouts.
+
+Cada layout foi redesenhado com um caso de uso real e distinto para evidenciar as forças e características de cada ViewGroup:
+- **LinearLayout:** Tela de Configurações / Preferências.
+- **RelativeLayout:** Card de Produto com Banner e Badges sobrepostas.
+- **TableLayout:** Extrato Financeiro / Tabela de Despesas.
+- **ConstraintLayout:** Postagem Social / Perfil com hierarquia plana.
 
 ---
 
-## 🛠️ Layouts Demonstrados
+## 🛠️ Layouts e Telas Demonstradas
 
-O aplicativo demonstra o funcionamento dos seguintes layouts:
+1. **Tela de Login (`activity_login.xml` / `MainActivity.kt`)**
+   - Tela inicial solicitando E-mail e Senha, com validação de campos e navegação para o comparativo.
 
-1. **ConstraintLayout (`activity_constraint.xml`)**
-   - O layout mais flexível e recomendado para interfaces complexas. Permite posicionar e dimensionar widgets em relação a outros elementos e ao container pai usando restrições (*constraints*).
+2. **ConstraintLayout (`activity_constraint.xml`)**
+   - Layout flexível e recomendado para interfaces complexas sem aninhamento excessivo.
 
-2. **LinearLayout (`activity_linear_demo.xml`)**
-   - Organiza os elementos filhos em uma única direção: linearmente na vertical (`vertical`) ou na horizontal (`horizontal`). Ideal para listas simples e formulários lineares.
+3. **LinearLayout (`activity_linear_demo.xml`)**
+   - Organiza os elementos filhos em uma única direção (vertical ou horizontal).
 
-3. **RelativeLayout (`activity_relative.xml`)**
-   - Permite posicionar elementos filhos em posições relativas uns aos outros (ex: à esquerda de, abaixo de) ou em relação ao container pai.
+4. **RelativeLayout (`activity_relative.xml`)**
+   - Permite posicionar elementos filhos em posições relativas uns aos outros ou ao container pai.
 
-4. **TableLayout (`activity_table.xml`)**
-   - Organiza os elementos em linhas (`TableRow`) e colunas, ideal para dados tabulares ou grades estruturadas.
+5. **TableLayout (`activity_table.xml`)**
+   - Organiza os elementos em linhas (`TableRow`) e colunas para dados tabulares estritos.
 
 ---
 
@@ -35,14 +42,16 @@ app/
 ├── src/
 │   └── main/
 │       ├── java/com/example/login/
-│       │   ├── MainActivity.kt
+│       │   ├── MainActivity.kt (Tela de Login)
+│       │   ├── ComparisonActivity.kt (Tela de Comparativo)
 │       │   ├── ConstraintActivity.kt
 │       │   ├── LinearActivity.kt
 │       │   ├── RelativeActivity.kt
 │       │   └── TableActivity.kt
 │       └── res/
 │           ├── layout/
-│           │   ├── activity_main.xml
+│           │   ├── activity_login.xml
+│           │   ├── activity_main.xml (Comparativo)
 │           │   ├── activity_constraint.xml
 │           │   ├── activity_linear_demo.xml
 │           │   ├── activity_relative.xml
@@ -73,6 +82,6 @@ app/
 
 ---
 
-## 👨‍💻 Autor
+## 📄 Licença
 
-Desenvolvido por **Bruno Souza** ([@herobruno](https://github.com/herobruno)).
+Este projeto foi desenvolvido para fins acadêmicos e educacionais de desenvolvimento mobile Android.
